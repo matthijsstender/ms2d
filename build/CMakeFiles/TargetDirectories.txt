@@ -1,0 +1,12 @@
+/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles/rebuild_cache.dir
+/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles/edit_cache.dir
+/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles/demo.dir
+/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles/common.dir
+/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/external/CMakeFiles/rebuild_cache.dir
+/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/external/CMakeFiles/edit_cache.dir
+/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/external/CMakeFiles/GLEW_190.dir
+/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/external/glfw-3.0.3/CMakeFiles/rebuild_cache.dir
+/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/external/glfw-3.0.3/CMakeFiles/edit_cache.dir
+/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/external/glfw-3.0.3/src/CMakeFiles/rebuild_cache.dir
+/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/external/glfw-3.0.3/src/CMakeFiles/edit_cache.dir
+/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/external/glfw-3.0.3/src/CMakeFiles/GLFW_303.dir
