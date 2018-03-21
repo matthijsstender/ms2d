@@ -189,6 +189,33 @@ common/camera.cpp.s:
 	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/common/camera.cpp.s
 .PHONY : common/camera.cpp.s
 
+common/entity.o: common/entity.cpp.o
+
+.PHONY : common/entity.o
+
+# target to build an object file
+common/entity.cpp.o:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/common/entity.cpp.o
+.PHONY : common/entity.cpp.o
+
+common/entity.i: common/entity.cpp.i
+
+.PHONY : common/entity.i
+
+# target to preprocess a source file
+common/entity.cpp.i:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/common/entity.cpp.i
+.PHONY : common/entity.cpp.i
+
+common/entity.s: common/entity.cpp.s
+
+.PHONY : common/entity.s
+
+# target to generate assembly for a file
+common/entity.cpp.s:
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/common/entity.cpp.s
+.PHONY : common/entity.cpp.s
+
 common/renderer.o: common/renderer.cpp.o
 
 .PHONY : common/renderer.o
@@ -285,6 +312,9 @@ help:
 	@echo "... common/camera.o"
 	@echo "... common/camera.i"
 	@echo "... common/camera.s"
+	@echo "... common/entity.o"
+	@echo "... common/entity.i"
+	@echo "... common/entity.s"
 	@echo "... common/renderer.o"
 	@echo "... common/renderer.i"
 	@echo "... common/renderer.s"

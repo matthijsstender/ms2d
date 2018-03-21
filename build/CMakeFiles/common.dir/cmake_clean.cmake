@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/common.dir/common/camera.cpp.o"
+  "CMakeFiles/common.dir/common/entity.cpp.o"
   "CMakeFiles/common.dir/common/renderer.cpp.o"
   "CMakeFiles/common.dir/common/sprite.cpp.o"
   "libcommon.pdb"

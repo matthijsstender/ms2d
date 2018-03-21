@@ -81,9 +81,33 @@ CMakeFiles/common.dir/common/camera.cpp.o.provides: CMakeFiles/common.dir/common
 CMakeFiles/common.dir/common/camera.cpp.o.provides.build: CMakeFiles/common.dir/common/camera.cpp.o
 
 
+CMakeFiles/common.dir/common/entity.cpp.o: CMakeFiles/common.dir/flags.make
+CMakeFiles/common.dir/common/entity.cpp.o: ../common/entity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/common.dir/common/entity.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/common.dir/common/entity.cpp.o -c /Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/common/entity.cpp
+
+CMakeFiles/common.dir/common/entity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/common.dir/common/entity.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/common/entity.cpp > CMakeFiles/common.dir/common/entity.cpp.i
+
+CMakeFiles/common.dir/common/entity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/common.dir/common/entity.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/common/entity.cpp -o CMakeFiles/common.dir/common/entity.cpp.s
+
+CMakeFiles/common.dir/common/entity.cpp.o.requires:
+
+.PHONY : CMakeFiles/common.dir/common/entity.cpp.o.requires
+
+CMakeFiles/common.dir/common/entity.cpp.o.provides: CMakeFiles/common.dir/common/entity.cpp.o.requires
+	$(MAKE) -f CMakeFiles/common.dir/build.make CMakeFiles/common.dir/common/entity.cpp.o.provides.build
+.PHONY : CMakeFiles/common.dir/common/entity.cpp.o.provides
+
+CMakeFiles/common.dir/common/entity.cpp.o.provides.build: CMakeFiles/common.dir/common/entity.cpp.o
+
+
 CMakeFiles/common.dir/common/renderer.cpp.o: CMakeFiles/common.dir/flags.make
 CMakeFiles/common.dir/common/renderer.cpp.o: ../common/renderer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/common.dir/common/renderer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/common.dir/common/renderer.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/common.dir/common/renderer.cpp.o -c /Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/common/renderer.cpp
 
 CMakeFiles/common.dir/common/renderer.cpp.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/common.dir/common/renderer.cpp.o.provides.build: CMakeFiles/common.di
 
 CMakeFiles/common.dir/common/sprite.cpp.o: CMakeFiles/common.dir/flags.make
 CMakeFiles/common.dir/common/sprite.cpp.o: ../common/sprite.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/common.dir/common/sprite.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/common.dir/common/sprite.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/common.dir/common/sprite.cpp.o -c /Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/common/sprite.cpp
 
 CMakeFiles/common.dir/common/sprite.cpp.i: cmake_force
@@ -132,6 +156,7 @@ CMakeFiles/common.dir/common/sprite.cpp.o.provides.build: CMakeFiles/common.dir/
 # Object files for target common
 common_OBJECTS = \
 "CMakeFiles/common.dir/common/camera.cpp.o" \
+"CMakeFiles/common.dir/common/entity.cpp.o" \
 "CMakeFiles/common.dir/common/renderer.cpp.o" \
 "CMakeFiles/common.dir/common/sprite.cpp.o"
 
@@ -139,11 +164,12 @@ common_OBJECTS = \
 common_EXTERNAL_OBJECTS =
 
 libcommon.a: CMakeFiles/common.dir/common/camera.cpp.o
+libcommon.a: CMakeFiles/common.dir/common/entity.cpp.o
 libcommon.a: CMakeFiles/common.dir/common/renderer.cpp.o
 libcommon.a: CMakeFiles/common.dir/common/sprite.cpp.o
 libcommon.a: CMakeFiles/common.dir/build.make
 libcommon.a: CMakeFiles/common.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libcommon.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libcommon.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/common.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/common.dir/link.txt --verbose=$(VERBOSE)
 
@@ -153,6 +179,7 @@ CMakeFiles/common.dir/build: libcommon.a
 .PHONY : CMakeFiles/common.dir/build
 
 CMakeFiles/common.dir/requires: CMakeFiles/common.dir/common/camera.cpp.o.requires
+CMakeFiles/common.dir/requires: CMakeFiles/common.dir/common/entity.cpp.o.requires
 CMakeFiles/common.dir/requires: CMakeFiles/common.dir/common/renderer.cpp.o.requires
 CMakeFiles/common.dir/requires: CMakeFiles/common.dir/common/sprite.cpp.o.requires
 

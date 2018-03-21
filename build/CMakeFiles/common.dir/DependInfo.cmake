@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/common/camera.cpp" "/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles/common.dir/common/camera.cpp.o"
+  "/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/common/entity.cpp" "/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles/common.dir/common/entity.cpp.o"
   "/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/common/renderer.cpp" "/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles/common.dir/common/renderer.cpp.o"
   "/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/common/sprite.cpp" "/Users/Matthijs/Documents/school/leerjaar2/opdrachten/project_studio/ms2d/build/CMakeFiles/common.dir/common/sprite.cpp.o"
   )

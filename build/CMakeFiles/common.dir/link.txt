@@ -1,2 +1,2 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libcommon.a  CMakeFiles/common.dir/common/camera.cpp.o CMakeFiles/common.dir/common/renderer.cpp.o CMakeFiles/common.dir/common/sprite.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libcommon.a  CMakeFiles/common.dir/common/camera.cpp.o CMakeFiles/common.dir/common/entity.cpp.o CMakeFiles/common.dir/common/renderer.cpp.o CMakeFiles/common.dir/common/sprite.cpp.o
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libcommon.a

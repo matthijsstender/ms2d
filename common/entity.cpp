@@ -2,11 +2,9 @@
 
 Entity::Entity()
 {
-  xpos = 0.0f;
-  ypos = 0.0f;
-  xscale = 0.0f;
-  yscale = 0.0f;
-  rotation = 0.0f;
+  this->rotation = 0;
+  this->position = glm::vec2(0,0);
+  this->scale = glm::vec2(1,1);
 }
 
 void Entity::addChild(Entity* child)
@@ -16,4 +14,17 @@ void Entity::addChild(Entity* child)
 	}
 	child->_parent = this;
 	this->_children.push_back(child);
+}
+
+void Entity::removeChild(Entity* child)
+{
+	std::vector< Entity* >::iterator it = _children.begin();
+	while (it != _children.end()) {
+		if ((*it) == child) {
+			child->_parent = NULL;
+			it = _children.erase(it);
+		} else {
+			++it;
+		}
+	}
 }

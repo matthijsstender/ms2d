@@ -1,6 +1,6 @@
 # CMake entry point
 cmake_minimum_required (VERSION 2.6)
-project (MyFramework)
+project (ms2d)
 
 find_package(OpenGL REQUIRED)
 
@@ -61,6 +61,8 @@ add_definitions(
 add_library(common
 	common/camera.h
 	common/camera.cpp
+	common/entity.h
+	common/entity.cpp
 	common/renderer.h
 	common/renderer.cpp
 	common/sprite.h
