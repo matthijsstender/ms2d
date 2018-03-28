@@ -37,8 +37,8 @@ glfw3.h
 -
 glm/glm.hpp
 -
-sprite.h
-.././common/sprite.h
+common/sprite.h
+.././common/common/sprite.h
 
 .././common/renderer.h
 GL/glew.h

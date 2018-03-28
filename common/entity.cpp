@@ -5,8 +5,14 @@ Entity::Entity()
   this->rotation = 0;
   this->position = glm::vec2(0,0);
   this->scale = glm::vec2(1,1);
+
+  _sprite = NULL;
 }
 
+Entity::~Entity()
+{
+	deleteSprite();
+}
 void Entity::addChild(Entity* child)
 {
 	if(child->_parent != NULL) {
@@ -27,4 +33,11 @@ void Entity::removeChild(Entity* child)
 			++it;
 		}
 	}
+}
+
+void Entity::addSprite(Sprite* spr)
+{
+	deleteSprite();
+	_sprite = new Sprite("");
+	*_sprite = *spr;
 }

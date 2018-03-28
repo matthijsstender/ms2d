@@ -13,12 +13,13 @@
 
 #include <glm/glm.hpp>
 
-#include "sprite.h"
+#include "common/sprite.h"
 
 class Entity {
-  Entity();
-  ~Entity();
 public:
+  Entity(); ///< @brief Constructor of an Entity
+  virtual ~Entity(); ///< @brief Destructor of an Entity
+
   Sprite* sprite;
 
   // data structure
@@ -31,7 +32,14 @@ public:
   /// @param child The Entity you want to remove from your children.
   /// @return void
   void removeChild(Entity* child);
-
+  // sprite
+	/// @brief get the Sprite from this Entity.
+	/// @return Sprite* _sprite
+	Sprite* sprite_1() { return _sprite; };
+	/// @brief add a Sprite to this Entity by Sprite*.
+	/// @param spr A pointer to a Sprite.
+	/// @return void
+	void addSprite(Sprite* spr);
   /// @brief get the parent of this Entity.
   /// @return Entity* _parent
   Entity* parent() { return _parent; };
@@ -41,8 +49,20 @@ private:
 	Entity* _parent; ///< @brief The _parent of this Entity
 	std::vector<Entity*> _children; ///< @brief The _children of this Entity
 
+  // sprite
+  Sprite* _sprite; ///< @brief The _sprite of this Entity
+
   glm::vec2 position;
   glm::vec2 scale;
   float rotation;
+
+  /// @brief delete the Sprite of this Entity.
+  /// @return void
+  void deleteSprite() {
+    if (_sprite != NULL) {
+      delete _sprite;
+      _sprite = NULL;
+    }
+  };
 };
 #endif /* ENTITY_H */
