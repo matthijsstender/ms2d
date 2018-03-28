@@ -40,7 +40,7 @@ private:
   // data structure
 	Entity* _parent; ///< @brief The _parent of this Entity
 	std::vector<Entity*> _children; ///< @brief The _children of this Entity
-  
+
   glm::vec2 position;
   glm::vec2 scale;
   float rotation;
