@@ -40,6 +40,16 @@ public:
 	/// @param spr A pointer to a Sprite.
 	/// @return void
 	void addSprite(Sprite* spr);
+	/// @brief add a Sprite to this Entity by filename.
+	/// @param filename The filename of the image you want to add as a Sprite.
+	/// @return void
+	void addSprite(const std::string& filename);
+  /// @brief add a Sprite to this Entity.
+  /// @param filename The filename of the image you want to add as a Sprite.
+  /// @param pivotx The x component of the pivotpoint.
+  /// @param pivoty The y component of the pivotpoint.
+  /// @return void
+  void addSprite(const std::string& filename, float pivotx, float pivoty);
   /// @brief get the parent of this Entity.
   /// @return Entity* _parent
   Entity* parent() { return _parent; };
