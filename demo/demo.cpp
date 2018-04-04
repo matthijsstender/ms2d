@@ -22,9 +22,6 @@ int main( void )
 		// Clear the screen
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		// Compute the ViewMatrix from keyboard and mouse input (see: camera.h/cpp)
-		computeMatricesFromInputs(renderer.window());
-
 		//glm::vec3 cursor = getCursor(); // from Camera
 		//printf("(%f,%f)\n",cursor.x, cursor.y);
 

@@ -9,6 +9,8 @@
 #include <glm/gtx/euler_angles.hpp>
 
 #include <common/sprite.h>
+#include <common/entity.h>
+#include <common/camera.h>
 
 class Renderer
 {
@@ -17,12 +19,15 @@ class Renderer
 		virtual ~Renderer();
 
 		void renderSprite(Sprite* sprite, float px, float py, float sx, float sy, float rot);
+		void renderEntity(glm::mat4 modelMatrix, Entity* entity, Camera* camera);
 		GLFWwindow* window() { return _window; };
 
 		unsigned int width() { return _window_width; };
 		unsigned int height() { return _window_height; };
 
 	private:
+		Camera* camera;
+		
 		int init();
 
 		GLFWwindow* _window;

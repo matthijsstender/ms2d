@@ -12,6 +12,7 @@ Renderer::Renderer(unsigned int w, unsigned int h)
 	_window_width = w;
 	_window_height = h;
 
+	camera = new Camera();
 	this->init();
 }
 
@@ -71,12 +72,14 @@ int Renderer::init()
 	// Use our shader
 	glUseProgram(_programID);
 
+	// Compute the ViewMatrix from keyboard and mouse input (see: camera.h/cpp)
+	camera->computeMatricesFromInputs(window());
 	return 0;
 }
 
 void Renderer::renderSprite(Sprite* sprite, float px, float py, float sx, float sy, float rot)
 {
-	glm::mat4 viewMatrix  = getViewMatrix(); // get from Camera (Camera position and direction)
+	glm::mat4 viewMatrix  = camera->getViewMatrix(); // get from Camera (Camera position and direction)
 	glm::mat4 modelMatrix = glm::mat4(1.0f);
 
 	// Build the Model matrix
