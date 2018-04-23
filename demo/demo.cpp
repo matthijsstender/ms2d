@@ -7,16 +7,23 @@
 #include <common/renderer.h>
 #include <common/camera.h>
 #include <common/sprite.h>
+#include <common/entity.h>
 
 int main( void )
 {
 	Renderer renderer(1280, 720);
 
-	Sprite* pencils = new Sprite("assets/pencils.tga");
-	Sprite* kingkong = new Sprite("assets/kingkong.tga");
-	Sprite* rgba = new Sprite("assets/rgba.tga");
+	Camera* camera = new Camera();
 
-	float rot_z = 0.0f;
+	camera->computeMatricesFromInputs(renderer.window());
+
+	Entity* pencils = new Entity();
+	Entity* kingkong = new Entity();
+	Entity* rgba = new Entity();
+
+	pencils->addSprite("assets/pencils.tga");
+	kingkong->addSprite("assets/kingkong.tga");
+	rgba->addSprite("assets/rgba.tga");
 
 	do {
 		// Clear the screen
@@ -26,10 +33,10 @@ int main( void )
 		//printf("(%f,%f)\n",cursor.x, cursor.y);
 
 		// Render all Sprites (Sprite*, xpos, ypos, xscale, yscale, rotation)
-		renderer.renderSprite(pencils, 400, 300, 1.0f, 1.0f, 0.0f);
-		renderer.renderSprite(kingkong, 900, 400, 1.0f, 1.0f, 0.0f);
-		renderer.renderSprite(rgba, renderer.width()/2, renderer.height()/2, 3.0f, 3.0f, rot_z);
-		rot_z += 0.03f;
+		renderer.renderSprite(camera, pencils->sprite_1(), 400, 300, 1.0f, 1.0f, 0.0f);
+		renderer.renderSprite(camera, kingkong->sprite_1(), 900, 400, 1.0f, 1.0f, 0.0f);
+		renderer.renderSprite(camera, rgba->sprite_1(), renderer.width()/2, renderer.height()/2, 3.0f, 3.0f, 0.0f);
+		pencils->rotation.z += 0.3f;
 
 		// Swap buffers
 		glfwSwapBuffers(renderer.window());

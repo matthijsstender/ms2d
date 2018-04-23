@@ -2,9 +2,9 @@
 
 Entity::Entity()
 {
-  this->rotation = 0;
-  this->position = glm::vec2(0,0);
-  this->scale = glm::vec2(1,1);
+  this->rotation = glm::vec3(0,0,0);
+  this->position = glm::vec3(0,0,0);
+  this->scale = glm::vec3(1,1,1);
 
   _sprite = NULL;
 }
@@ -38,8 +38,8 @@ void Entity::removeChild(Entity* child)
 void Entity::addSprite(Sprite* spr)
 {
 	deleteSprite();
-	_sprite = new Sprite("");
-	*_sprite = *spr;
+	//_sprite = new Sprite("");
+	_sprite = spr;
 }
 
 void Entity::addSprite(const std::string& filename)
@@ -50,5 +50,5 @@ void Entity::addSprite(const std::string& filename)
 void Entity::addSprite(const std::string& filename, float pivotx, float pivoty)
 {
 	deleteSprite();
-	_sprite = new Sprite("");
+	_sprite = new Sprite(filename);
 }

@@ -20,6 +20,12 @@ public:
   Entity(); ///< @brief Constructor of an Entity
   virtual ~Entity(); ///< @brief Destructor of an Entity
 
+  //virtual void update(float deltaTime) = 0;
+
+  glm::vec3 position;
+  glm::vec3 scale;
+  glm::vec3 rotation;
+
   Sprite* sprite;
 
   // data structure
@@ -62,9 +68,6 @@ private:
   // sprite
   Sprite* _sprite; ///< @brief The _sprite of this Entity
 
-  glm::vec2 position;
-  glm::vec2 scale;
-  float rotation;
 
   /// @brief delete the Sprite of this Entity.
   /// @return void

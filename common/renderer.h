@@ -18,7 +18,7 @@ class Renderer
 		Renderer(unsigned int w, unsigned int h);
 		virtual ~Renderer();
 
-		void renderSprite(Sprite* sprite, float px, float py, float sx, float sy, float rot);
+		void renderSprite(Camera* camera, Sprite* sprite, float px, float py, float sx, float sy, float rot);
 		void renderEntity(glm::mat4 modelMatrix, Entity* entity, Camera* camera);
 		GLFWwindow* window() { return _window; };
 
@@ -27,7 +27,7 @@ class Renderer
 
 	private:
 		Camera* camera;
-		
+
 		int init();
 
 		GLFWwindow* _window;

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdio>
+#include <cerrno>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>

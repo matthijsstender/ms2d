@@ -43,7 +43,6 @@ int Renderer::init()
 		return -1;
 	}
 	glfwMakeContextCurrent(_window);
-
 	// Initialize GLEW
 	if (glewInit() != GLEW_OK) {
 		fprintf(stderr, "Failed to initialize GLEW\n");
@@ -77,7 +76,7 @@ int Renderer::init()
 	return 0;
 }
 
-void Renderer::renderSprite(Sprite* sprite, float px, float py, float sx, float sy, float rot)
+void Renderer::renderSprite(Camera* camera, Sprite* sprite, float px, float py, float sx, float sy, float rot)
 {
 	glm::mat4 viewMatrix  = camera->getViewMatrix(); // get from Camera (Camera position and direction)
 	glm::mat4 modelMatrix = glm::mat4(1.0f);
@@ -134,6 +133,28 @@ void Renderer::renderSprite(Sprite* sprite, float px, float py, float sx, float 
 
 	glDisableVertexAttribArray(vertexPosition_modelspaceID);
 	glDisableVertexAttribArray(vertexUVID);
+}
+
+void Renderer::renderEntity(glm::mat4 modelMatrix, Entity* entity, Camera* camera)
+{
+	// Build the Model matrix
+	glm::mat4 translationMatrix	= glm::translate(glm::mat4(1.0f), glm::vec3(entity->position.x, entity->position.y, entity->position.z));
+	glm::mat4 rotationMatrix	= glm::eulerAngleYXZ(entity->rotation.x, entity->rotation.y, entity->rotation.z);
+	glm::mat4 scalingMatrix		= glm::scale(glm::mat4(1.0f), glm::vec3(entity->scale.x, entity->scale.y, 1.0f));
+
+	glm::mat4 mm = translationMatrix * rotationMatrix * scalingMatrix;
+
+	// multiply ModelMatrix for this entity with the ModelMatrix of its parent (the caller of this method)
+	// the first time we do this (for the root-parent), modelMatrix is identity.
+	modelMatrix *= mm;
+
+	// #######################################################
+
+	// Check for Sprites to see if we need to render anything
+	Sprite* sprite = entity->sprite_1();
+	if (sprite != NULL) {
+		this->renderSprite(camera, sprite, entity->position.x, entity->position.y, entity->scale.x, entity->scale.y, entity->rotation.z); // dynamic Sprite from PixelBuffer
+	}
 }
 
 GLuint Renderer::loadShaders(const char* vertex_file_path, const char* fragment_file_path)
